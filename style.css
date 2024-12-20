@@ -1,0 +1,164 @@
+@import url(./assets/css/hero.css);
+@import url(./assets/css/nav.css);
+@import url(./assets/css/about.css);
+@import url(./assets/css/experience.css);
+@import url(./assets/css/services.css);
+@import url(./assets/css/portfolio.css);
+@import url(./assets/css/testimonials.css);
+@import url(./assets/css/contact.css);
+@import url(./assets/css/footer.css);
+
+/* Responsive CSS  */
+@import url(./assets/css/responsive/mobile.css);
+@import url(./assets/css/responsive/tablet.css);
+
+:root {
+  --color-bg: #000000;
+  --color-bg-varient: #0066ff;
+  --color-primary: #0066ff;
+  --color-secondary: #b1b3f8;
+  --color-primary-varient: #ff000066;
+  --color-white: #fff;
+  --color-border: grey;
+  --color-light: rgba(255, 255, 255, 1);
+  --transition: all 400ms ease;
+}
+
+
+body {
+  background-color: var(--color-bg);
+  font-family: "Ador Noirrit";
+  color: var(--color-white);
+  background-image: radial-gradient(#424242 0.5px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+section {
+  margin-top: 8rem;
+}
+
+h2,
+h5 {
+  text-align: center;
+  color: var(--color-light);
+}
+
+.small-text-light {
+  color: var(--color-light);
+}
+
+section > h2 {
+  color: var(--color-primary);
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  /* margin-top: -10px; */
+}
+
+section > h5 {
+  font-size: 0.9rem;
+}
+
+section h3 {
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+section p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--color-light);
+}
+
+.text-light {
+  color: var(--color-light);
+}
+
+a {
+  color: var(--color-primary);
+  transition: var(--transition);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+a:hover {
+  color: var(--color-white);
+  transition: var(--transition);
+}
+
+#cursor,
+#box,
+#text {
+  cursor: pointer;
+}
+#cursor {
+  overflow: visible;
+  transform: translate3d(300px, 0, 0) scale(1);
+  transform-origin: center center;
+  transform-box: fill-box;
+  animation: cursor 5s ease infinite alternate;
+}
+@keyframes cursor {
+  0% {
+    opacity: 0;
+    transform: translate3d(300px, 0, 0) scale(1);
+  }
+  30% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(-200px, -200px, 0) scale(1);
+  }
+
+  /* clique */
+  65% {
+    opacity: 1;
+    transform: translate3d(-200px, -200px, 0) scale(0.95);
+  }
+  70% {
+    opacity: 1;
+    transform: translate3d(-200px, -200px, 0) scale(1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(-300px, -50px, 0) scale(1);
+  }
+}
+
+#box {
+  opacity: 0;
+  animation: box 5s ease infinite alternate;
+}
+@keyframes box {
+  0%,
+  60% {
+    opacity: 0;
+  }
+  65%,
+  100% {
+    opacity: 1;
+  }
+}
+
+.figma-sec {
+  margin-top: 50px;
+  margin-bottom: -100px;
+  width: 100%;
+}
