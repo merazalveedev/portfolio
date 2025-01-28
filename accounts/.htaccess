@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^accounts/(.*)$ /redirect-handler.php?social=$1 [L,QSA]
