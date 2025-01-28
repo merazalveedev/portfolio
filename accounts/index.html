@@ -3,29 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Redirect</title>
+    <title>Hello Visitor</title>
 </head>
 <body>
     <h1>Hello Visitor</h1>
 
     <script>
-        // Get the current URL
+        // Get current URL
         const currentUrl = window.location.href;
 
-        // Define social links
-        const socialLinks = {
-            facebook: "https://hello.merazalvee.com/accounts/facebook",
-            youtube: "https://hello.merazalvee.com/accounts/youtube",
-            telegram: "https://hello.merazalvee.com/accounts/telegram"
+        // Define the redirections
+        const redirects = {
+            "https://hello.merazalvee.com/accounts/facebook": "https://www.facebook.com",
+            "https://hello.merazalvee.com/accounts/youtube": "https://www.youtube.com",
+            "https://hello.merazalvee.com/accounts/telegram": "https://t.me"
         };
 
-        // Check and redirect based on URL
-        if (currentUrl === socialLinks.facebook) {
-            window.location.href = "https://www.facebook.com";
-        } else if (currentUrl === socialLinks.youtube) {
-            window.location.href = "https://www.youtube.com";
-        } else if (currentUrl === socialLinks.telegram) {
-            window.location.href = "https://t.me";
+        // Check if the current URL matches any redirection
+        if (redirects[currentUrl]) {
+            window.location.href = redirects[currentUrl];
         }
     </script>
 </body>
